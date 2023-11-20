@@ -1,0 +1,13 @@
+const mongoose = require('mongoose');
+const verificationTokenSchema = new mongoose.Schema({
+    identifier: String,
+    token: {
+        type: String,
+        unique: true
+    },
+    expires: Date
+});
+
+const VerificationToken = mongoose.model('VerificationToken', verificationTokenSchema);
+
+module.exports = VerificationToken;
