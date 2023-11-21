@@ -34,7 +34,7 @@ export const authOptions = {
         }
 
         const client = await clientPromise;
-        const db = client.db('cmsdb'); // Replace with your database name
+        const db = client.db('cmsdb');
         const usersCollection = db.collection('users');
 
         const user = await usersCollection.findOne({
